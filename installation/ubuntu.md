@@ -52,6 +52,17 @@ Let's see the version of RubyGems we got with Ruby with `gem -v`:
 
 Looks like we did not get any version installed. We will install RubyGems with `apt-get`, since that is the easiest way:
 
+
+Download 1.8.15 version of rybygems from http://rubygems.org/pages/download as a TGZ file
+
+goto the download location and type the following commands
+
+$ tar xzf rubygems-1.8.15.tgz
+$ cd rubygems-1.8.15
+$ sudo ruby setup.rb
+
+after that,
+
     $ sudo apt-get install rubygems1.8
     (...)
     Setting up ruby1.8-dev (1.8.7.302-2) ...
@@ -61,28 +72,8 @@ Looks like we did not get any version installed. We will install RubyGems with `
 Ask RubyGems for it's version with `gem -v`:
 
     $ gem -v
-    1.3.7
-
-RubyGems 1.3.7 is really old ([May 13, 2010](https://rubygems.org/gems/rubygems-update/versions)). Let's try to update it the usual way, with `gem update --system`:
-
-    $ gem update --system
-    ERROR:  While executing gem ... (RuntimeError)
-    gem update --system is disabled on Debian, because it will
-    overwrite the content of the rubygems Debian package, and
-    might break your Debian system in subtle ways. The
-    Debian-supported way to update rubygems is through apt-get,
-    using Debian official repositories. If you really know what
-    you are doing, you can still update rubygems by setting the
-    REALLY_GEM_UPDATE_SYSTEM environment variable, but please
-    remember that this is completely unsupported by Debian.
-
-Since I do not *really* know what I am doing, I will leave RubyGems at version 1.3.7 and hope everything will work.
-
-
-
-
-
-### watir-webdriver ###
+    1.8.15
+##install watir-webdriver ###
 
 I think that Watir-webdriver gem is the future of Watir. In short, it can drive Firefox, Chrome and Opera.
 
